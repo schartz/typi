@@ -1,0 +1,160 @@
+body {
+    overflow: scroll;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+pre {
+    margin: 0;
+}
+
+#editor {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+#content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 56px;
+    background-color: #2f3129;
+}
+
+.nav-container {
+    margin-top: 5px;
+}
+
+.glyphicon {
+    color: #fff;
+}
+
+.logo {
+    font-size: 7em;
+}
+
+.select-pref {
+    background-color: #474842;
+    color: #ddd;
+    border: none;
+}
+
+.pick {
+    background-color: #272822;
+    padding: 10px;
+    margin-bottom: 0;
+    padding-bottom: 1px;
+    width: 100%;
+    display: table;
+    height: 56px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-panel {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-color: rgba(20, 20, 20, .9);
+    color: #ddd;
+}
+
+.main-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sub-panel {
+    height: 20em;
+    padding-top: 3em;
+}
+
+.bg-1 {
+    color: #fcab6c;
+}
+
+.bg-2 {
+    color: #aea4c9;
+}
+
+.bg-3 {
+    color: #90add9;
+}
+
+.footer {
+    margin-bottom: 30px;
+}
+
+.ace_text-layer {
+    z-index: 2!important;
+}
+
+.other-cursor {
+    position: absolute;
+    border-radius: 0!important;
+    animation: blinker 1s infinite step-end;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.color0 {
+    border-left: 2px solid #1abc9c;
+}
+
+.color1 {
+    border-left: 2px solid #e74c3c;
+}
+
+.color2 {
+    border-left: 2px solid #3498db;
+}
+
+.color3 {
+    border-left: 2px solid #9b59b6;
+}
+
+.color4 {
+    border-left: 2px solid #f1c40f;
+}
+
+.color5 {
+    border-left: 2px solid #e67e22;
+}
+
+.other-selection {
+    position: absolute;
+    opacity: .3;
+}
+
+.bg-color0 {
+    background-color: #1abc9c;
+}
+
+.bg-color1 {
+    background-color: #e74c3c;
+}
+
+.bg-color2 {
+    background-color: #3498db;
+}
+
+.bg-color3 {
+    background-color: #9b59b6;
+}
+
+.bg-color4 {
+    background-color: #f1c40f;
+}
+
+.bg-color5 {
+    background-color: #e67e22;
+}
