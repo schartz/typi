@@ -4,29 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Typi</title>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+    {{/*<link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">*/}}
 </head>
 
 <body>
-    <div class="main-bg">
-    <div class="container text-center">
-        <div class="jumbotron main-panel col-md-6 col-md-offset-3 col-xs-12">
-            <h2>Typi</h2>
-            <label>Create a document link to start collaborating.</label>
-            <hr>
-            <form class="form-horizontal" action="/create-room" method="POST">
-                <div class="input-group"><span class="input-group-addon">{{printf "%s" .BaseUrl}}</span>
-                    <input class="form-control" type="text" name="roomId" id="roomId" autocomplete="off">
-                </div>
-                <h5 class="text-warning" id="countWarning" style="height: 1em"></h5>
-                <div class="input-group center-block">
-                <button disabled id="roomBtn" class="btn btn-block btn-primary">Create document</button>
-                </div>
-            </form>
+
+<div id="scattered-elements">
+    <div class="moon"></div>
+    <div class="rocket"></div>
+</div>
+<section class="hero is-fullheight" id="main-hero">
+    <div class="hero-head">
+
+    </div>
+    <div class="hero-body">
+        <div class="container has-text-centered mb5">
+            <h1 class="title has-text-white">
+                Typi
+            </h1>
+            <h2 class="subtitle has-text-white mt1">
+                A dead simple collaborative editor <br>for code, markup, interviews and teaching.
+            </h2>
+
+            <div class="center-all mt3">
+                <form class="form-control" action="/create-room" method="POST">
+
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static is-primary-forced">
+                                {{printf "%s" .BaseUrl}}
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" name="roomId" id="roomId" autocomplete="off" type="text">
+                        </p>
+                    </div>
+
+                    <div class="field mt">
+                        <p class="control has-text-centered">
+                            <button disabled id="roomBtn" class="button is-primary">
+                                Create document
+                            </button>
+                        </p>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-    </div>
+</section>
     <script type="text/javascript">
     var socketName = '{{.Socket}}'
     </script>
