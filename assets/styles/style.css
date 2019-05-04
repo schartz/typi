@@ -73,6 +73,24 @@ input#roomId:active {
     border-color: #00d1b2;
 }
 
+footer {
+    background-color: #2C1B56 !important;
+    color: white;
+    border-top: 1px solid fuchsia;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover  {
+    color: #00d1b2;
+}
+
+footer strong {
+    color: white;
+}
+
 .mt1 {
    margin-top: 1rem;
 }
