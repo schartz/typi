@@ -2,7 +2,7 @@ Arguments:
   /home/schartz/.nvm/versions/node/v8.15.0/bin/node /usr/share/yarn/bin/yarn.js run build ./src/
 
 PATH: 
-  /home/schartz/Goenv/projects/src/typi/node_modules/.bin:/tmp/yarn--1556968686957-0.1302920937698171:/home/schartz/Goenv/projects/src/typi/node_modules/.bin:/home/schartz/.config/yarn/link/node_modules/.bin:/home/schartz/.yarn/bin:/home/schartz/.nvm/versions/node/v8.15.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/schartz/.nvm/versions/node/v8.15.0/lib/node_modules/npm/bin/node-gyp-bin:/home/schartz/.nvm/versions/node/v8.15.0/bin/node_modules/npm/bin/node-gyp-bin:/home/schartz/Goenv/go/bin:/home/schartz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/schartz/Goenv/projects/bin
+  /home/schartz/Goenv/projects/src/typi/node_modules/.bin:/tmp/yarn--1557044521467-0.13398281259306688:/home/schartz/Goenv/projects/src/typi/node_modules/.bin:/home/schartz/.config/yarn/link/node_modules/.bin:/home/schartz/.yarn/bin:/home/schartz/.nvm/versions/node/v8.15.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/schartz/.nvm/versions/node/v8.15.0/lib/node_modules/npm/bin/node-gyp-bin:/home/schartz/.nvm/versions/node/v8.15.0/bin/node_modules/npm/bin/node-gyp-bin:/home/schartz/Goenv/go/bin:/home/schartz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/schartz/Goenv/projects/bin
 
 Yarn version: 
   1.15.2

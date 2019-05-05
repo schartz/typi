@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Document | Typi</title>
     <link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">
@@ -55,6 +58,25 @@
     {{if (eq .Env "production")}}    
     <script src="/assets/js/bundle-prod.js"></script>
     {{end}}
+
+<script type="text/javascript">
+    document.addEventListener('keydown', function(event) {
+        /*console.log("lplpl");
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        if(event.keyCode == 37) {
+            alert('Left was pressed');
+        }
+        else if(event.keyCode == 39) {
+            alert('Right was pressed');
+        }
+        console.log("opopopopoppop");
+        event.stopPropagation();*/
+
+        console.log(event.keyCode);
+        console.log(event);
+    });
+</script>
 </body>
 
 </html>

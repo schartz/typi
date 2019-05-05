@@ -15,8 +15,10 @@ class EditorWrapper {
     this.roomId = splitUrl[splitUrl.length - 1];
     this.isChanging = false;
 
+    const self = this;
+
     this.editor.session.on(EventTypes.EditorChange, function (e) {
-      this.userEdit(e)
+      self.userEdit(e)
     }.bind(this));
 
     this.selectionManager = new SelectionManager(this.editor)
