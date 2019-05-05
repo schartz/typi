@@ -2,6 +2,12 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+#fork-me-on-github {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
 #main-logo {
     width: 11rem;
     margin-bottom: 2rem;
