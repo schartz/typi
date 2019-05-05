@@ -2,10 +2,15 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+#main-logo {
+    width: 11rem;
+    margin-bottom: 2rem;
+}
+
 
 #main-hero {
     background: #2d465a url('/assets/images/bg.png') no-repeat 50% 50%;
-    background-size: 100% auto;
+    background-size: cover;
 }
 
 #scattered-elements {
