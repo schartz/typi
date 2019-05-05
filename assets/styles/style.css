@@ -4,8 +4,12 @@ body {
 
 
 #main-hero {
-    background: #2C1B56 url('/assets/images/bg.jpg') no-repeat top center;
+    background: #2d465a url('/assets/images/bg.png') no-repeat 50% 50%;
     background-size: 100% auto;
+}
+
+#scattered-elements {
+    display: none;
 }
 
 #main-hero .hero-body .container .title{
@@ -17,6 +21,10 @@ body {
     font-weight: lighter;
     font-size: 32px;
     line-height: 50px;
+}
+
+.hero-body {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .moon {
@@ -59,24 +67,24 @@ body {
 }
 
 .is-primary-forced {
-    background-color: #00d1b2 !important;
-    border-color: transparent !important;
+    background-color: #2d465a !important;
+    border-color: #f3d59f !important;
     color: #fff !important;
 }
 
 input#roomId:hover {
-    border-color: #00d1b2;
+    border-color: #f3d59f;
 }
 
 input#roomId:active {
     box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
-    border-color: #00d1b2;
+    border-color: #f3d59f;
 }
 
 footer {
-    background-color: #2C1B56 !important;
+    background-color: #101f2a !important;
     color: white;
-    border-top: 1px solid fuchsia;
+    border-top: 1px solid #f3d59f;
 }
 
 footer a {
