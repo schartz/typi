@@ -11,8 +11,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/flatty.css">
-    {{/*<link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">*/}}
+    <link rel="stylesheet" type="text/css" href="/assets/styles/bulma-switch.min.css">
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
@@ -96,7 +95,65 @@
         <div class="column is-10">
             <pre id="editor">{{.Text}}</pre>
         </div>
-        <div class="column" id="controls"></div>
+        <div class="column" id="controls">
+            <div class="box mt2">
+                <div class="field">
+                    <label class="label has-text-white">Syntax</label>
+                    <div class="control">
+                        <div class="select is-small">
+                            <select id="language-select"></select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="field mt2">
+                    <label class="label has-text-white">Key Bindings</label>
+                    <div class="control">
+                        <div class="select is-small">
+                            <select id="keybinding-select"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field mt2">
+                    <input id="lockRoom" type="checkbox" class="switch">
+                    <label for="lockRoom" class="has-text-white">Lock Room</label>
+                </div>
+            </div>
+
+
+            <div class="box">
+                <div class="field">
+                    <label class="label has-text-white">People</label>
+                    <div class="list">
+                        <a class="list-item">
+                            <span id="my-name">Girrafe</span>&nbsp;(You)
+                        </a>
+                        <a class="list-item">
+                            Badjer
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="field">
+                    <label class="label has-text-white">Activity</label>
+                    <div id="activity-log">
+                        <p>
+                            Badger joind the room.
+                        </p>
+                        <p>
+                            Badger changed the syntax to c++ and also teh key bindings to emacs
+                        </p>
+                        <p>
+                            Badger left the room
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
