@@ -36,6 +36,17 @@ export function setUserCount (newCount) {
   userCount.innerHTML = newCount;
 }
 
+export function setSelfName (nameString) {
+  document.getElementById("my-name").innerText = nameString;
+}
+
+export function addMemberName(nameString) {
+  const memberNode = document.createElement("a");   // Create a <button> element
+  memberNode.classList.add('list-item');
+  memberNode.innerText = nameString;
+  document.getElementById('memberList').appendChild(memberNode);
+}
+
 langSelect.onchange = function () {
   const selectedMode = langSelect.options[langSelect.selectedIndex].value;
   Editor.changeHighlighting(selectedMode);

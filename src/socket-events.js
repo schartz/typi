@@ -1,7 +1,7 @@
 import socket from './client-socket';
 import Editor from './EditorWrapper';
 import { EventTypes } from './lists';
-import { changeUserCount, setUserCount } from './init-dom';
+import { addMemberName, setSelfName, changeUserCount, setUserCount } from './init-dom';
 
 socket.on(EventTypes.Connection, () => {
   socket.emit(EventTypes.SubscribeToRoom, Editor.getRoomId())
@@ -36,4 +36,16 @@ socket.on(EventTypes.ChangeCursor, msg => {
 socket.on(EventTypes.OtherUserDisconnect, change => {
   changeUserCount(-1);
   Editor.removeOtherUser(change)
+});
+
+socket.on("yourName", message => {
+  setSelfName(message)
+});
+
+socket.on("memberJoined", message => {
+  addMemberName(message)
+});
+
+socket.on("otherOnes", message => {
+  console.log(message)
 });

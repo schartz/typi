@@ -15,4 +15,5 @@ type Room struct {
     Text string
     Mode string
     Count int
+    Members string
 }

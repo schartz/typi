@@ -2,13 +2,13 @@ package main
 
 import (
     "github.com/joho/godotenv"
-    "html/template"
-    "net/http"
-    "log"
-    "strings"
     "gopkg.in/mgo.v2"
     "gopkg.in/mgo.v2/bson"
+    "html/template"
+    "log"
+    "net/http"
     "os"
+    "strings"
 )
 
 type EditorTmpl struct {
@@ -119,10 +119,10 @@ func main() {
         io.ServeHTTP(w, r)
     })
 
-    Rooms.EnsureIndex(mgo.Index{
-        Key: []string{"roomid"},
-        Unique: true,
-        DropDups: true,
+    _ = Rooms.EnsureIndex(mgo.Index{
+        Key:        []string{"roomid"},
+        Unique:     true,
+        DropDups:   true,
         Background: true,
     })
 
