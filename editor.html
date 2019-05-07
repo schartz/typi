@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Document | Typi</title>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="/assets/styles/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+    {{/*<link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">*/}}
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
@@ -31,9 +34,81 @@
 </head>
 
 <body>
-    <script type="text/javascript">
+
+<script type="text/javascript">
     var mode = '{{.Mode}}', socketName = '{{.Socket}}'
-    </script>
+</script>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="/assets/images/logo-white.svg">
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="field has-addons">
+                    <p class="control">
+                        <input class="input is-small" disabled type="text" id="sharing-link">
+                    </p>
+                    <p class="control">
+                        <button class="button is-primary is-small is-outlined">
+                            Copy Link
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+            <a class="navbar-item" href="https://forms.gle/8EzC3AJa1qyLopqv7" target="_blank">
+                Feedback
+            </a>
+
+            <a class="navbar-item" href="https://github.com/schartz/typi">
+                Get to the source
+            </a>
+
+            <a class="navbar-item" href="https://github.com/schartz/typi/issues">
+                <button class="button is-outlined is-danger is-small">
+                    I found a bug!
+                </button>
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+<div id="wrapper">
+    <div class="columns" style="height: 100%">
+        <div class="column is-10">
+            <pre id="editor">{{.Text}}</pre>
+        </div>
+        <div class="column" id="controls"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
     <div id="content">
         <div class="pick">
             <div class="form-group col-sm-4 col-xs-6">

@@ -110,6 +110,70 @@ footer strong {
     color: white;
 }
 
+
+
+
+
+
+
+.navbar {
+    background: #20211e;
+    border-bottom: 1px solid #000;
+}
+
+.navbar-item, .navbar-link {
+    color: white;
+}
+
+
+.navbar-item img {
+    max-height: 2rem;
+}
+
+.navbar-link.is-active, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:hover {
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+}
+
+#wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 56px;
+    background-color: #272822;
+}
+
+#editor-wrapper {
+    height: 100%;
+    padding-top: 1rem;
+}
+
+#editor {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+#controls {
+    background: #20211e;
+    border-left: 1px solid #000;
+}
+
+
+
+
+
+
+
+
+
+
+
 .mt1 {
    margin-top: 1rem;
 }

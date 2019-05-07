@@ -11,6 +11,7 @@ class EditorWrapper {
     this.editor.session.setMode(mode);
     this.editor.$blockScrolling = Infinity;
     this.editor.getSession().setUseWrapMode(true);
+    this.editor.setShowPrintMargin(false);
     let splitUrl = document.location.href.split('/');
     this.roomId = splitUrl[splitUrl.length - 1];
     this.isChanging = false;
