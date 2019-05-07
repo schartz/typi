@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="/assets/styles/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/flatty.css">
     {{/*<link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">*/}}
 
@@ -36,7 +37,7 @@
 <body>
 
 <script type="text/javascript">
-    var mode = '{{.Mode}}', socketName = '{{.Socket}}'
+    var mode = '{{.Mode}}', socketName = '{{.Socket}}';
 </script>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -57,10 +58,10 @@
             <div class="navbar-item">
                 <div class="field has-addons">
                     <p class="control">
-                        <input class="input is-small" disabled type="text" id="sharing-link">
+                        <input class="input is-small" readonly type="text" id="sharing-link">
                     </p>
                     <p class="control">
-                        <button class="button is-primary is-small is-outlined">
+                        <button class="button is-primary is-small is-outlined" onclick="copyShareLinkToClipboard()">
                             Copy Link
                         </button>
                     </p>
@@ -133,6 +134,21 @@
     {{if (eq .Env "production")}}    
     <script src="/assets/js/bundle-prod.js"></script>
     {{end}}
+    <script src="/assets/js/humane.min.js"></script>
+
+    <script type="text/javascript">
+
+        window.onload = function () {
+            document.getElementById('sharing-link').value = window.location;
+        };
+
+        function copyShareLinkToClipboard() {
+            var text = document.getElementById('sharing-link');
+            text.select();
+            document.execCommand("copy");
+            humane.log("Sharing Link Copied");
+        }
+    </script>
 </body>
 
 </html>
