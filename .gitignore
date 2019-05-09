@@ -9,4 +9,4 @@ yarn-error-log
 *bundle.js.tmp-browserify*
 typi
 .idea/
-yarn-error-.log
+yarn-error.log
