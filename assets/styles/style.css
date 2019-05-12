@@ -248,6 +248,13 @@ a.list-item {
     left: 1.625rem;
 }
 
+@media screen and (max-width: 1087px) {
+    .navbar-menu {
+        background: #20211e;
+        border-bottom: 1px solid #000;
+    }
+}
+
 
 
 
