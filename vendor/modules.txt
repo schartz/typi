@@ -1,0 +1,30 @@
+# github.com/googollee/go-engine.io v0.0.0-20170224222511-80ae0e43aca1
+## explicit
+github.com/googollee/go-engine.io
+github.com/googollee/go-engine.io/message
+github.com/googollee/go-engine.io/parser
+github.com/googollee/go-engine.io/polling
+github.com/googollee/go-engine.io/transport
+github.com/googollee/go-engine.io/websocket
+# github.com/googollee/go-socket.io v0.0.0-20170525141029-5447e71f36d3
+## explicit
+github.com/googollee/go-socket.io
+# github.com/gorilla/websocket v1.2.1-0.20170718202341-a69d9f6de432
+## explicit
+github.com/gorilla/websocket
+# github.com/joho/godotenv v1.3.0
+## explicit
+github.com/joho/godotenv
+# github.com/smartystreets/goconvey v1.6.4
+## explicit
+# gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
+## explicit
+# gopkg.in/mgo.v2 v2.0.0-20160818020120-3f83fa500528
+## explicit
+gopkg.in/mgo.v2
+gopkg.in/mgo.v2/bson
+gopkg.in/mgo.v2/internal/json
+gopkg.in/mgo.v2/internal/sasl
+gopkg.in/mgo.v2/internal/scram
+# gopkg.in/yaml.v2 v2.4.0
+## explicit
