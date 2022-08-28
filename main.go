@@ -1,70 +1,41 @@
 package main
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/gobwas/ws"
-	"github.com/gobwas/ws/wsutil"
-	"net"
 	"net/http"
-	"time"
+	"pragati2112.github.io/db"
+	"pragati2112.github.io/handlers"
+	"pragati2112.github.io/wsThings"
 )
 
-func nameConn(conn net.Conn) string {
-	return conn.LocalAddr().String() + " > " + conn.RemoteAddr().String()
-}
-
-func handler(c *gin.Context) {
-	conn, _, _, err := ws.UpgradeHTTP(c.Request, c.Writer)
-	if err != nil {
-		fmt.Println(err)
-	}
-	go func() {
-		defer conn.Close()
-
-		for {
-			msg, op, err := wsutil.ReadClientData(conn)
-			if err != nil {
-				fmt.Println(err)
-				return
-			}
-			err = wsutil.WriteServerMessage(conn, op, msg)
-			if err != nil {
-				fmt.Println(err)
-				return
-			}
-
-		}
-	}()
-}
-
 func main() {
+
+	go wsThings.EditingRoomManagerInstance.Init()
+
+	// set up gin router with static file serving and HTML template rendering
 	router := gin.Default()
 
-	router.GET("/unique-id", func(c *gin.Context) {
-		fmt.Println(time.Now().UnixNano())
-		c.JSON(http.StatusOK, gin.H{
-			"roomId": time.Now().UnixNano(),
-		})
-	})
-
+	router.LoadHTMLGlob("./templates/*")
 	router.Static("/static", "./static")
 
-	router.GET("/ws", handler)
-
-	router.LoadHTMLGlob("./templates/*")
-
-	router.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", gin.H{
-			"title": "Posts",
+	// cutesy pingy pongy route
+	router.GET("/ping", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "pong",
 		})
 	})
 
-	router.GET("/:roomId", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "editor.html", gin.H{
-			"title": "Posts",
-		})
+	router.GET("/ws/:roomId", func(context *gin.Context) {
+		wsThings.WsConnectionHandler(context)
 	})
 
-	router.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	router.GET("/", handlers.LandingPage)
+	router.GET("/:roomId", handlers.EditorPage)
+
+	// listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	db.DatabaseTest()
+	err := router.Run()
+	if err != nil {
+		panic(err)
+	}
 }
