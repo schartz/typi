@@ -1,12 +1,17 @@
-node_modules/
-.env
-npm-debug.log
-assets/js/bundle.js
-assets/js/bundle-prod.js
-assets/js/index-bundle.js
-assets/js/index-bundle-prod.js
-yarn-error-log
-*bundle.js.tmp-browserify*
-typi
-.idea/
-yarn-error.log
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+.idea
+_DB_GOTYPI/
